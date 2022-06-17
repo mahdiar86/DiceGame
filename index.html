@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <title>Pig Dice Game</title>
+  </head>
+  <body>
+    <header>
+      <h1>Final Score Is <span id="finalScoreTitle">0</span></h1>
+    </header>
+    <div class="dice-animation">
+        <img src="assets/images/image_processing20201020-1513-1a7pmsx.gif">
+    </div>
+    <div class="showScore">
+        <h3>Score Is <span id="showScoreSpan">0</span></h3>
+    </div>
+    <div class="main">
+      <div class="right">
+        <div class="playerHeader">
+          <h2>Player Two</h2>
+        </div>
+        <div class="playerScore">
+          <span class="scoreRight">0</span>
+        </div>
+        <div class="buttons">
+          <button id="holdButton_right" onclick="shakeDice('right')">hold</button>
+          <button id="startButton_right">ReStart</button>
+        </div>
+      </div>
+      <div class="left">
+        <div class="playerHeader">
+          <h2>Player One</h2>
+        </div>
+        <div class="playerScore">
+          <span class="scoreLeft">0</span>
+        </div>
+        <div class="buttons">
+          <button id="holdButton_left" onclick="shakeDice('left')">hold</button>
+          <button id="startButton_left">ReStart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup-modal">
+      <div class="popup-header">
+        <h2>Final Score</h2>
+      </div>
+      <div class="popup-body">
+        <input type="number" placeholder="Final Score : " id="finalScore" />
+        <button onclick="startGame()">Start Game</button>
+      </div>
+    </div>
+    <div class="cover"></div>
+    <div class="win-panel">
+        <h1 id="winPlayerMessage">Player One Wins</h1>
+    </div>
+  </body>
+  <script src="assets/js/app.js"></script>
+</html>
